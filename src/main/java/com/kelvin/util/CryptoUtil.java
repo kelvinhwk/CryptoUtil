@@ -8,12 +8,12 @@ import com.sun.org.apache.xerces.internal.impl.dv.util.HexBin;
 public class CryptoUtil {
 
 	private static final MessageDigest md5MessageDigest;
-	private static final MessageDigest sha512MessageDigest;
+//	private static final MessageDigest sha512MessageDigest;
 
 	static {
 		try {
 			md5MessageDigest = MessageDigest.getInstance("md5");
-			sha512MessageDigest = MessageDigest.getInstance("sha512");
+//			sha512MessageDigest = MessageDigest.getInstance("sha512");
 		} catch (NoSuchAlgorithmException e) {
 			throw new RuntimeException(e);
 		}
@@ -46,9 +46,9 @@ public class CryptoUtil {
 	 * @param data
 	 * @return
 	 */
-	public synchronized static byte[] sha512Hash(byte[] data) {
-		return sha512MessageDigest.digest(data);
-	}
+//	public synchronized static byte[] sha512Hash(byte[] data) {
+//		return sha512MessageDigest.digest(data);
+//	}
 
 	/**
 	 * sha512
@@ -56,9 +56,9 @@ public class CryptoUtil {
 	 * @param data
 	 * @return
 	 */
-	public static String sha512HashToStr(byte[] data) {
-		byte[] result = sha512Hash(data);
-		return HexBin.encode(result);
-	}
+//	public static String sha512HashToStr(byte[] data) {
+//		byte[] result = sha512Hash(data);
+//		return HexBin.encode(result);
+//	}
 
 }
