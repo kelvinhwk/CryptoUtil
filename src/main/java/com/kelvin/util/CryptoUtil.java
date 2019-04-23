@@ -39,6 +39,10 @@ public class CryptoUtil {
 		byte[] result = md5Hash(data);
 		return HexBin.encode(result);
 	}
+	
+	public static String md5HashToStr(String data) {
+		return md5HashToStr(data.getBytes());
+	}
 
 	/**
 	 * sha512
