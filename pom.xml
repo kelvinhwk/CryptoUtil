@@ -3,4 +3,32 @@
   <groupId>kelvin</groupId>
   <artifactId>CryptoUtil</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.0</version>
+                <configuration>
+                    <target>8</target>
+                    <source>8</source>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    
+    <dependencies>
+	    <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
+		<dependency>
+		    <groupId>commons-codec</groupId>
+		    <artifactId>commons-codec</artifactId>
+		    <version>1.15</version>
+		    <scope>provided</scope>
+		</dependency>
+    
+    </dependencies>
+    
+
+    
 </project>

@@ -3,7 +3,8 @@ package com.kelvin.util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import com.sun.org.apache.xerces.internal.impl.dv.util.HexBin;
+import org.apache.commons.codec.binary.Hex;
+import org.apache.tomcat.util.buf.HexUtils;
 
 public class CryptoUtil {
 
@@ -37,7 +38,8 @@ public class CryptoUtil {
 	 */
 	public static String md5HashToStr(byte[] data) {
 		byte[] result = md5Hash(data);
-		return HexBin.encode(result);
+		return Hex.encodeHexString(result);
+//		return HexBin.encode(result);
 	}
 	
 	public static String md5HashToStr(String data) {
